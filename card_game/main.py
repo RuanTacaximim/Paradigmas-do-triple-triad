@@ -16,11 +16,7 @@ class triple_triad():
         label = UI.Label(root, text=f"Largura: {screen_width} px, Altura: {screen_height} px")
         label.pack(pady=20)
 
-        def controle_de_janela():
-            if window_mode == True:
-                fullscreen()
-            elif fullscreen == True:
-                window_mode()
+
             
         def fullscreen():
             #ativa fullscreen
@@ -32,7 +28,7 @@ class triple_triad():
         #botão sair
         window_button = UI.Button(root, text='sair da tela cheia', command= window_mode)
         window_button.place(x= 1700,y=0)
-        fullscreen_button = UI.Button(root,text="[_]", command= controle_de_janela)
+        fullscreen_button = UI.Button(root,text="[_]", command= fullscreen)
         fullscreen_button.place(x= 1600,y=10)
 
 
