@@ -7,7 +7,7 @@ class triple_triad():
         root = UI.Tk()
         #muda o nome
         root.title('Tripe triad')
-    
+        root.configure(bg="black")
         # Obtém a largura e altura da tela
         screen_width = root.winfo_screenwidth()
         screen_height = root.winfo_screenheight()
@@ -29,7 +29,7 @@ class triple_triad():
         window_button = UI.Button(root, text='sair da tela cheia', command= window_mode)
         window_button.place(x= 1700,y=0)
         fullscreen_button = UI.Button(root,text="[_]", command= fullscreen)
-        fullscreen_button.place(x= 1600,y=10)
+        fullscreen_button.place(x= 1600,y=0)
 
 
         # o porgrama é uma função e termina aqui, volte para cima ☝️
