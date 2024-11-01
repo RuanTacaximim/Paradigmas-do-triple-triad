@@ -19,15 +19,8 @@ class triple_triad():
 
             
         def switch_window():
-            state = 2
-            switcher = False
-            root.attributes("-fullscreen",switcher)
-            if state == 1:
-                switcher = True
-            if state == 2:
-                switcher = False
-            if state > 2:
-                state = 1
+            nonlocal root
+            root.attributes("-fullscreen", not root.attributes("-fullscreen"))
 
         switch_window()
                 
