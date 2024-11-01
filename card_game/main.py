@@ -18,18 +18,24 @@ class triple_triad():
 
 
             
-        def fullscreen():
-            #ativa fullscreen
-            root.attributes("-fullscreen",True)
-        def window_mode():
-            #desativa fullscreen
-            root.attributes("-fullscreen",False)
+        def switch_window():
+            
+
+            switcher: bool
+            def window_mode():
+                #desativa fullscreen
+                root.attributes("-fullscreen",False)
+                if switcher == False:
+                    switcher = True
+                if switcher == True:
+                    switcher = False
+            window_mode()
         
         #botão sair
-        window_button = UI.Button(root, text='sair da tela cheia', command= window_mode)
+        window_button = UI.Button(root, text='[_]', command= switch_window)
         window_button.place(x= 1700,y=0)
-        fullscreen_button = UI.Button(root,text="[_]", command= fullscreen)
-        fullscreen_button.place(x= 1600,y=0)
+        
+        
 
 
         # o porgrama é uma função e termina aqui, volte para cima ☝️

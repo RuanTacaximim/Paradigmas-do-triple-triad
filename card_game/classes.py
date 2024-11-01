@@ -11,8 +11,17 @@ class carta():
        
     
 class player():
-    def __init__(self,name : str, deck: list, winner: bool):
+    def __init__(self,name : str, deck: list, winner: bool, hand: list):
         self.name = name
         self.deck = deck
+        self.hand = hand 
         self.winner = winner
         self.cartas_tomadas = 0
+
+class table():
+    def __init__(self, table_x: list, table_y: list, player_quantity: int):
+        self.table_x = table_x
+        self.table_y = table_y
+        self.player_quantity = player_quantity
+
+        
