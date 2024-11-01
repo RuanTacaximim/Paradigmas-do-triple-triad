@@ -19,17 +19,23 @@ class triple_triad():
 
             
         def switch_window():
+            state = 2
+            switcher = False
+            root.attributes("-fullscreen",switcher)
+            if state == 1:
+                switcher = True
+            if state == 2:
+                switcher = False
+            if state > 2:
+                state = 1
+
+        switch_window()
+                
+
             
 
-            switcher: bool
-            def window_mode():
-                #desativa fullscreen
-                root.attributes("-fullscreen",False)
-                if switcher == False:
-                    switcher = True
-                if switcher == True:
-                    switcher = False
-            window_mode()
+            
+
         
         #botão sair
         window_button = UI.Button(root, text='[_]', command= switch_window)
