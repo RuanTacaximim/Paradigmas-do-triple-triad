@@ -1,19 +1,20 @@
 from classes import carta, player
-import tkinter as UI
+import customtkinter as UI
 
 class triple_triad():
     def __init__(self):
         # inicia o tkinter 
-        root = UI.Tk()
+        root = UI.CTk()
         #muda o nome
         root.title('Tripe triad')
         root.configure(bg="black")
         # Obtém a largura e altura da tela
         screen_width = root.winfo_screenwidth()
         screen_height = root.winfo_screenheight()
+        
 
         # Cria um rótulo para mostrar o tamanho da tela
-        label = UI.Label(root, text=f"Largura: {screen_width} px, Altura: {screen_height} px")
+        label = UI.CTkLabel(root, text=f"Largura: {screen_width} px, Altura: {screen_height} px")
         label.pack(pady=20)
 
 
@@ -31,7 +32,7 @@ class triple_triad():
 
         
         #botão sair
-        window_button = UI.Button(root, text='[_]', command= switch_window)
+        window_button = UI.CTkButton(root, text='[__]', command= switch_window)
         window_button.place(x= 1700,y=0)
         
         
