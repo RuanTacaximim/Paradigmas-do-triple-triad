@@ -1,8 +1,8 @@
 class carta():
-    def __init__(self, name : str, clases: str, cima:int ,baixo:int ,esquerda:int ,direita:int , owner:str):
+    def __init__(self, name : str, classes: str, cima:int ,baixo:int ,esquerda:int ,direita:int , owner:str):
         
         self.name = name
-        self.clases = clases
+        self.classes = classes
         self.cima = cima
         self.baixo = baixo
         self.esquerda = esquerda
@@ -19,9 +19,9 @@ class player():
         self.cartas_tomadas = 0
 
 class table():
-    def __init__(self, table_x: list, table_y: list, player_quantity: int):
-        self.table_x = table_x
-        self.table_y = table_y
+    def __init__(self, table_h: list, table_v: list, player_quantity: int):
+        self.table_x = table_h
+        self.table_y = table_v
         self.player_quantity = player_quantity
 
         
